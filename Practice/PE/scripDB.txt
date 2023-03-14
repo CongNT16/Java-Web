@@ -1,0 +1,10 @@
+USE [master]
+GO
+
+CREATE DATABASE [MyOrder] 
+GO
+USE [MyOrder]
+GO
+
+
+Sửa DBcontex

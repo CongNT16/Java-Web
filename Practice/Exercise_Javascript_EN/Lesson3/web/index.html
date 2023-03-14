@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        
+        <script language="javascript">
+            function Tong(a, b) {
+                var c = parseInt(a.value) + parseInt(b.value);
+                 document.getElementById("results").value = c;
+            }
+
+            function Hieu(a, b) {
+                var c = parseInt(a.value) - parseInt(b.value);
+                document.getElementById("results").value = c;
+            }
+
+            function Tich(a, b) {
+                var c = parseInt(a.value) * parseInt(b.value);
+                document.getElementById("results").value = c;
+            }
+
+//            function Thuong(a, b) {
+//                if(parseInt(b.value) !==0){
+//                var c = parseInt(a.value) / parseInt(b.value);
+//                document.getElementById("results").value = c;
+//                }else{document.getElementById("results").value = "Enter b again(b#0)!";}
+//            }
+        </script>
+
+        <div>
+            <h3>Thực hiện phép toán</h3>
+            <form >
+                Nhập22 a: <input type="text" id="t1"><br>
+                Nhập b: <input type="text" id =t2><br>
+                <input type="submit" value="a+b" onclick="Tong(t1,t2)"/>
+                <input type="button" value="a-b" onclick="Hieu(t1,t2)"/>
+                <input type="button" value="a*b" onclick="Tich(t1,t2)"/>
+                <input type="button" value="a/b" onclick="Thuong(t1,t2)"/><br>
+
+                Kết Quả  <input type="text"  id="results"  value=""><br>
+            </form>
+
+        </div>
+    </body>
+</html>

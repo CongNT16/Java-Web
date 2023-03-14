@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson10</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+         <div><h1>Thay đổi thuộc tính trang web</h1>
+            
+            <form>
+                Nhập màu nền trang web <input type="color" value="#ffffff" id="color-bgr"><br><br>
+                Nhập màu chữ trang web <input type="color" id="color-text"><br><br>
+                Nhập nội dung thanh trạng thái <input type="text" id="text-bar"><br><br>
+                Đặt màu cho liên kết <input type="color" id="color-link"><br><br>
+                Đặt màu liên kết khi click chuột <input type="color" id="color-link-active"><br><br>
+                Đặt màu cho liên kết đã thăm <input type="color" id="color-link-after"><br><br><!-- comment -->
+                
+                <input type="button" value="Thực hiện" onclick="myFunction()">
+                <input type="button" value="Thoát"><br>
+                <br>
+                <a style="padding: 10px;" href="#" class="lien-ket">Đây là link 1</a>
+                <a style="padding: 10px;" href="#" class="lien-ket">Đây là link 2</a>
+                <a style="padding: 10px;" href="#" class="lien-ket">Đây là link 3</a>
+            </form>
+        </div>
+        
+        <script language="javascript">
+            let myFunction = () => {
+                document.querySelector('html').style.backgroundColor = document.querySelector('#color-bgr').value;
+                document.querySelector('html').style.color = document.querySelector('#color-text').value;
+                document.querySelector('h1').textContent = document.querySelector('#text-bar').value;
+                let links = document.querySelectorAll('a');
+                for (let link of links) {
+                    link.style.color = document.querySelector('#color-link').value;
+                    link.onmousedown = ()=> {
+                        link.style.color = document.querySelector('#color-link-active').value;
+                    }
+                    link.onmouseup = ()=> {
+                        link.style.color = document.querySelector('#color-link-after').value;
+                    }
+                }                
+             }
+        </script>
+    </body>
+</html>

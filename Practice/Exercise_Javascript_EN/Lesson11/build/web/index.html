@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson11</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+         <div><br><br>
+            <p style="background-color: black;color: white;">Văn tế nghĩa sĩ Cần Giuộc ngôi đền thiêng liêng trong văn học. Cụ Đồ Chiếu chỉ là một nhà thơ mù, 
+               một người hát rong của nhân dân, một số tác phẩm cụ để lại mà tiêu biểu nhất là Văn tế nghĩa sĩ 
+               Cần Giuộc đã làm giàu cho văn học Việt Nam ở vào thời điểm thử thách khắc nghiệt nhất cho văn học 
+               và cho lịch sử đất nước.</p><br><br><br>
+            
+            <h1>Thay đổi thuộc tính của đoạn văn trên</h1><br><br><!-- comment -->
+            
+            <form>
+                <input type="color" id="color-text" value="#ffffff"> màu chữ<br><br>
+                <input type="color" id="color-bgr"> màu nền<br><br>
+                <input type="text" id="font-size"> cỡ chữ<br><br>
+                <input type="text" id="font-family"> font chữ<br><br>
+                
+                
+                <input type="button" id="submit" onclick="myFunction()" value="Thực hiện">
+                <input type="button" value="Thoát"><br>
+                
+            </form>
+            
+            
+        </div>
+            
+        <script language="javascript">
+            let myFunction = () => {
+                document.querySelector('p').style.color =  document.querySelector('#color-text').value;
+                document.querySelector('p').style.backgroundColor =  document.querySelector('#color-bgr').value;
+                document.querySelector('p').style.fontSize= document.querySelector('#font-size').value + 'px';  
+                document.querySelector('p').style.fontFamily  = document.querySelector('#font-family').value;
+            }
+        </script>
+    </body>
+</html>

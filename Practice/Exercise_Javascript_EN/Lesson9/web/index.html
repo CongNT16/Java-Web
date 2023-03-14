@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson9</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .underline{padding-bottom: 2px;
+	               background-color: gray;}
+        </style>
+    </head>
+    <body>
+        <div><h1 style="text-align: center">Đối tượng String</h1>
+            <form>
+                Nhập đoạn văn <textarea id="text-input" oninput="length.value = lengthText()"></textarea> <br><br>
+                
+                Tổng số ký tự <input id="length" type="text" value=""><br><br>
+                
+                <div class="underline"></div><br><br>
+                
+                Nhập vị trí <input type="text" id="indexInput" oninput="valueIndex.value = indexFunc()"> <br><br>
+                Ký tự tương ứng <input type="text" id="valueIndex"> <br><br>
+                
+                <div class="underline"></div><br><br>
+                
+                Nhập chuỗi <input type="text" id="strFind" oninput="rsFind.value = findStr()"> <br><br>
+                Vị trí tương ứng <input type="text" id="rsFind"> <br><br>
+                
+                <div class="underline"></div><br><br>
+                
+                Nhập vị trí cần tách Từ <input type="text" id="start" value="0" oninput="result.value = splitFunc()">
+                 Đến <input type="text" id="end" value="0" oninput="result.value = splitFunc()"> <br><br>
+                Kết quả <input type="text" id="result"> <br><br>
+                
+                <button>Nhập lại</button>
+                <input type="button" value="Thoát"><br>
+            </form>
+            
+      
+        
+        </div>
+        
+        <script language="javascript">
+            let lengthText = () => {
+                return document.querySelector('#text-input').value.length;
+            }
+            let indexFunc = () => {
+                let x = indexInput.value;
+                let str = document.querySelector('#text-input').value;
+                if(Number.isInteger &&x>=0 && x < str.length ) {
+                    return str[x];
+                }
+                return null;
+            }
+
+            let findStr = () => {
+                let x = strFind.value;
+                let str = document.querySelector('#text-input').value;
+                let check = str.indexOf(x);
+                if (check === -1) return null;
+                return check;
+            }
+            let splitFunc = () => {
+                let str = document.querySelector('#text-input').value;
+                let startV = start.value,endV = end.value;
+                if(startV < endV && endV < str.length) {
+                    return str.slice(startV,endV);
+                }
+                return null;
+            }
+        </script>
+    </body>
+</html>

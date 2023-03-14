@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson7</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+       <form >
+        <div><h1>Đăng ký thành viên</h1>
+
+            <div >
+                 Tên truy cập <input type="text" id="username"> 
+                <span class="error username"> (*) </span>
+            </div>
+            <br>
+            <div>
+                Mật khẩu <input type="password" id="password">
+                <span class="error password"> (*) </span>
+            </div>
+        <br>
+            <div>
+                    Nhập lại mật khẩu <input type="password" id="passwordAgain">
+                    <span class="error passwordAgain"> (*) </span>
+            </div>
+            <br>
+            <div>
+                 Tên đầy đủ <input type="text" id="fullname">
+                 <span class="error fullname"> (*) </span>
+            </div>
+            <br>
+            <div>
+                 Giới tính <select id="gender">
+                                <option> Nam </option>
+                                <option> Nữ </option>
+                                        
+                            </select> 
+            </div>
+           <br>
+            <div>
+                   Email <input type="text" id="email">  
+                   <span class="error email"> (*) </span>
+            </div>
+            <br>
+            <div>
+                  Địa chỉ <input type="text" class="address"> <!-- comment -->
+            </div>    
+                <input type="button" value="Đăng ký" onclick="validator()">
+                <button>Thoát</button>
+            </div>
+            <p class="result"></p>
+
+    </form>
+    <script language="javascript">
+        let  validator =() => {
+            if(!isRequired(username.value)) {
+                document.querySelector('.username').textContent = '(*) Không được bỏ trống';
+                document.querySelector('.username').style.color = 'red';
+            } else {
+                if(username.value.length < 8) {
+                    document.querySelector('.username').textContent = '(*) Tên đăng nhập phải từ 8 kí tự trở lên';
+                    document.querySelector('.username').style.color = 'red';
+                } else {
+                    document.querySelector('.username').textContent = '(*)';
+                    document.querySelector('.username').style.color = 'black';
+                }
+            }
+            if(!isRequired(password.value)) {
+                document.querySelector('.password').textContent = '(*) Không được bỏ trống';
+                document.querySelector('.password').style.color = 'red';
+            }  else {
+                    document.querySelector('.password').textContent = '(*)';
+                    document.querySelector('.password').style.color = 'black';
+                }
+            if(!isRequired(passwordAgain.value)) {
+                document.querySelector('.passwordAgain').textContent = '(*) Không được bỏ trống';
+                document.querySelector('.passwordAgain').style.color = 'red';
+            }  else {
+                if(password.value !== passwordAgain.value) {
+                
+                document.querySelector('.passwordAgain').textContent = '(*) Mật khẩu không khớp';
+                document.querySelector('.passwordAgain').style.color = 'red';
+            }  else {
+                    document.querySelector('.passwordAgain').textContent = '(*)';
+                    document.querySelector('.passwordAgain').style.color = 'black';
+                }
+                }
+            if(!isRequired(fullname.value)) {
+                document.querySelector('.fullname').textContent = '(*) Không được bỏ trống';
+                document.querySelector('.fullname').style.color = 'red';
+            }  else {
+                    document.querySelector('.fullname').textContent = '(*)';
+                    document.querySelector('.fullname').style.color = 'black';
+                }
+            if(!isRequired(email.value)) {
+                document.querySelector('.email').textContent = '(*) Không được bỏ trống';
+                document.querySelector('.email').style.color = 'red';
+            } else {
+               let checkEmail = email.value;
+               if(!/^.+@gmail.com$/.test(checkEmail))   {
+                document.querySelector('.email').textContent = '(*) Email không hợp lệ';
+                document.querySelector('.email').style.color = 'red';
+               } else {
+                     document.querySelector('.email').textContent = '(*)';
+                    document.querySelector('.email').style.color = 'black';
+               }
+            }
+
+            let error = document.querySelectorAll('.error');
+            let check = true;
+            error.forEach(va => {
+                if(va.style.color === 'red') check = false; });
+            if(check === true) {
+                let info = `tài khoản: ${username.value}`
+                document.querySelector('.result').textContent = 'Đăng ký thành công ' +info;
+            }
+
+        }
+
+        let isRequired= (value) => {
+                if(value === '' || value === null) return false;
+                return true;
+            }
+    </script>
+    </body>
+</html>

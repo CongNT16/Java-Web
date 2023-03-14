@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Exercise 5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .underline{
+                padding-top: 2px;
+                background-color: gray;
+            }
+
+            form{
+                margin-top: 100px;
+                margin-left: 500px;
+                margin-right: 600px;
+                border: 2px solid violet;
+                padding: 5px 10px 15px 20px
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <form action="insert" method="post">
+
+            <h3 style="text-align: center; font-size: 20pt;"> Đối tượng String</h3><br>
+            Nhập đoạn văn :  <textarea name="text-input" style="margin-left: 40px;"></textarea> <br><br>
+
+            Tổng số ký tự <input name="length-text" type="text" value="" readonly size="10" style="background-color: #CCFFFF"> &emsp;
+            <button type="submit" name="click" value="tongkytu">click</button>
+            <br><br>
+
+            <div class="underline"></div><br><br>
+
+            Nhập vị trí <input type="text" name="index-input" size="1"> &ensp;
+
+            Ký tự tương ứng <input type="text" name="valueIndex" readonly size="1" style="background-color: #CCFFFF">&emsp;
+            <button type="submit" name="click" value="kytutuongung">click</button>
+            <br><br>
+
+            <div class="underline"></div><br><br>
+
+            Nhập chuỗi <input type="text" name="str-find" size="1"> &ensp;
+
+            Vị trí tương ứng <input type="text" name="rsFind" readonly size="1" style="background-color: #CCFFFF">&emsp;
+            <button type="submit" name="click" value="vitrituongung">click</button><br><br>
+
+            <div class="underline"></div><br><br>
+
+            Nhập vị trí cần tách Từ <input type="text" name="start" value="" size="1" >
+            Đến <input type="text" name="end" value="" size="1"> <br><br>
+            Kết quả <input type="text" name="result" readonly style="background-color: #CCFFFF">&emsp;
+            <button type="submit" name="click" value="ketqua">click</button><br><br><br><br>
+
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <button type="reset">Nhập lại</button>
+            <button type="submit">submid</button>
+            <button onclick="closeTab()">Thoát</button><br>
+            
+            
+        </form>
+
+        <script language="javascript" >
+            function  closeTab() {
+                window.close();
+            }
+        </script>
+
+    </body>
+</html>

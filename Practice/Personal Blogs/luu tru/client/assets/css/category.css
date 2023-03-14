@@ -1,0 +1,24 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Oct 19, 2022, 8:05:58 AM
+    Author     : nguye
+*/
+
+/**
+   * main 
+   */
+  
+.test2{
+    background: var(--background-primary);
+    padding-top: 2rem;
+    padding-bottom: var(--py);
+    /*text-align: center;*/
+}
+
+.test2 .h1 {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}

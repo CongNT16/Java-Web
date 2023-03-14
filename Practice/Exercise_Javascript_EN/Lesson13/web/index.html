@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson13</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <h1>MENU</h1>
+            <ul onmouseleave="funcL()" onmouseover="func()">
+                <li><a href="/news"  >Tin tức</a></li>
+                <ul id="list">
+                    <li><a href="/1">Tin tức 1</a></li>
+                    <li><a href="/2">Tin tức 2</a></li>
+                    <li><a href="/3">Tin tức 3</a></li>
+	        </ul>
+                <li><a href="/about">Giới thiệu</a></li>
+                <li><a href="/contact">Liên hệ</a></li>
+            </ul></div>
+        
+        <script language = "javascript">
+            let func = () => {
+                document.querySelector('#list').style.display = 'block';
+            }
+            let funcL =() => {
+                document.querySelector('#list').style.display = 'none';
+            }
+            
+        </script>
+    </body>
+</html>

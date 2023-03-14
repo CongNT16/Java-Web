@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson12</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-image: linear-gradient(0, rgba(164, 85, 85, 0.03), rgba(156, 52, 52, 0.03));
+}
+
+.row1 {
+    width: 25%;
+    float: left;
+    text-align: center;
+
+
+}
+
+.row2 {
+    width: 50%;
+    float: left;
+}
+
+.small-img {
+    width: 70%;
+}
+
+.big-img {
+    width: 100%;
+}
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <div class="row1">
+            <div class="img1">
+                <img class="small-img" src="./img/anh1.jpg" alt="">
+            </div>
+
+            <div class="img2">
+            <img class="small-img" src="./img/anh2.jpg" alt="">
+            </div>
+
+            <div class="img3">
+            <img class="small-img" src="./img/anh3.jpg" alt="">
+            </div>
+
+        </div>
+
+        <div class="row2">
+            <img src="./img/anh4.jpg" alt="" class="big-img">
+        </div>
+
+        <div class="row1">
+            <div class="img">
+                <img class="small-img" src="./img/anh4.jpg" alt="">
+            </div>
+
+            <div class="img">
+                <img class="small-img" src="./img/anh5.jpg" alt="">
+            </div>
+
+            <div class="img">
+                <img class="small-img" src="./img/anh1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let imgs = document.querySelectorAll('.small-img');
+        for(let img of imgs) {
+            img.addEventListener('mouseover',() => {
+                let imgTag = img.outerHTML;
+                imgTag=imgTag.replace('small-img','big-img');
+                document.querySelector('.row2').innerHTML = imgTag;
+            })
+        }
+    </script>
+    </body>
+</html>

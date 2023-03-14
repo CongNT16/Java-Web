@@ -1,0 +1,70 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Oct 13, 2022, 9:47:52 PM
+    Author     : nguye
+*/
+
+
+.about_me {
+    padding: 0 15rem;
+    font-family: Calibre,Inter,San Francisco,SF Pro Text,-apple-system,system-ui,sans-serif;
+    line-height: 1.1;
+    color: var(--desc-about-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.about_me .about_introduction {
+    max-width: 100rem;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about_me .about_introduction .about_sayhi {
+    margin: 0 0 3rem 0.4rem;
+    font-size: 1.6rem;
+    color: var(--main-about-color);
+    font-family: SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace;
+    font-weight: 400;
+}
+
+.about_me .about_introduction .about_name {
+    font-size: 5rem;
+    color: var(--title-about-color);
+    font-weight: 700;
+}
+
+.about_me .about_introduction .about_text {
+    margin-top: 1rem;
+    font-size: 4.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: unset;
+    min-height: 5rem;
+}
+
+.ityped-cursor {
+    -webkit-animation: blink 1s infinite;
+    animation: blink 1s infinite;
+    font-size: 2.6rem;
+    margin-left: 0.4rem;
+}
+
+.about_me .about_introduction .about_description {
+    max-width: 54rem;
+    line-height: 1.4;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 2rem 0 4rem;
+}

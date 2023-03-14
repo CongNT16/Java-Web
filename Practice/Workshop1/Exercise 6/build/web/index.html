@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Exercise 6</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            form{
+                margin-top: 200px;
+                margin-left: 600px;
+                margin-right: 600px;
+                border: 2px solid blue;
+                padding: 5px 10px 15px 10px
+            }
+            html{
+                text-align: justify;
+                }
+        </style>
+        
+        <script language="javascript" >
+            function  closeTab() {
+//                window.open(location.href, "_self", "");
+                window.close();
+            }
+        </script>
+
+
+    </head>
+    <body>
+        <form action="giaiphuongtrinh" method="get">
+            <h3 style="color: blue; text-align: center; font-size: 20pt;">Giải phương trình bậc nhất</h3>
+            <!--a x + b = 0 <br><br>-->
+            <span style="font-weight: bold">Nhập a: </span><input type="text" name="a"><br><br>
+            <span style="font-weight: bold">Nhập b: </span><input type="text" name="b"><br><br>
+
+            &emsp;&emsp;&emsp;&emsp;&emsp;
+            <button type="submit" name="click" value="giaipt">Giải PT</button>
+            <button type="reset" onclick="closeTab()" name="click" value="thoat">Thoát</button><br><br>
+
+            <span style="font-weight: bold">Kết luận nghiệm</span><br><br>
+            &emsp;&emsp;<input type="text" name="results" value="" readonly><br><br>
+        </form>
+        
+    </body>
+</html>

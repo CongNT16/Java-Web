@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson8</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <div>
+            <form>
+                Nhập n <input type="text" id="input"> <br><br>
+                Kiểm tra số nguyên tố <input type="text" id="result"> <br><br>
+                
+                <input type="button" value="Kết quả" onclick="func()">
+            </form></div>
+        <script language = "javascript">
+            let func =() => {
+                result.value = check(Number.parseInt(input.value));
+            }
+
+            let check = (n)=> {
+                if (n <2) return false;
+                if(n == 2 || n== 3) return true;
+                for(let i =2;i<n;i++) {
+                    if (n%i ===0) return false;
+                }
+                return true;
+            }
+            
+        </script>
+    </body>
+</html>

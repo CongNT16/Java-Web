@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Exercise 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            form{
+                margin-top: 200px;
+                margin-left: 500px;
+                margin-right: 700px;
+                border: 2px solid blue;
+                padding: 5px 10px 15px 10px
+            }
+            td{
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <form action="findminmax" method="get">
+            <h3 style="color: blue; text-align: center">TÌM MAX VÀ TÌM MIN</h3>
+            <table>
+                <tr>
+                    <td>Nhập a: </td>
+                    <td><input type="text" name="a" style="background-color: #CCFFFF"></td>
+                </tr>
+                <tr>
+                    <td>Nhập b: </td>
+                    <td><input type="text" name="b" style="background-color: #CCFFFF"></td>
+                </tr>
+                <tr>
+                    <td>Nhập c: </td>
+                    <td><input type="text" name="c" style="background-color: #CCFFFF"></td>
+                </tr>
+                <tr>
+                    <td>Kết quả: </td>
+                    <td><input type="text" name="ketqua" style="background-color: #CCFFFF" readonly></td>
+                </tr>
+            </table><br>    
+
+            <input name="find" type="radio" value="max" />Tìm số lớn nhất 
+            <input name="find" type="radio" value="min" />Tìm số nhỏ nhất <br><br>
+
+            &emsp;&emsp;&emsp;&emsp;&emsp;
+            <button type="submit" name="tim">Tìm</button> 
+            &emsp;<button type="reset" name="xoa">Xoá</button>
+        </form>
+    </body>
+</html>

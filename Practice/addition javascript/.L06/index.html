@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson6</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+     <div>
+            <h1>Các thao tác với mảng</h1></div>
+    <form>
+        Input <input type="text" id="input" value=""><br>
+        Chọn <input name="find" type="radio" id="enter-arr"> Nhập mảng  <input name="find" type="radio" id="print-arr"> In mảng <br>
+        <input name="find" type="radio" id="tong-le"> Tổng lẻ <input name="find" type="radio" id="tich-chan"> Tích chẵn 
+        <input name="find" type="radio" id="sort"> Sắp xếp <br>
+        
+        <input type="button" value="Thực Hiện" onclick="myFunction()">
+        <input type="button" value="Thoát"><br>
+        <p class="print"></p>
+    </form>
+    <script language="javascript">
+        let myFunction = ()=> {
+            let x= document.querySelector('#input').value;
+            let arr = x.split(' ');
+            arr =  arr.map(value => Number.parseInt(value));
+            
+            if(document.querySelector('#print-arr').checked === true) {
+                document.querySelector('p').innerHTML = "Array : " + arr;
+            }
+            if(document.querySelector('#enter-arr').checked === true) {
+                document.querySelector('p').innerHTML = "Nhập thành công";
+            }
+            if(document.querySelector('#tong-le').checked === true) {
+                document.querySelector('p').innerHTML = "Tổng lẻ : " + arr.reduce((s,value)=>{
+                    if(value %2 != 0) return s + value;
+                    return s;
+                },0);
+            }
+            if(document.querySelector('#tich-chan').checked === true) {
+                document.querySelector('p').innerHTML = "Tích chẵn : " + arr.reduce((s,value)=>{
+                    if(value %2 === 0) return s*value;
+                    return s;
+                },1); ;
+            }
+            if(document.querySelector('#sort').checked === true) {
+                document.querySelector('p').innerHTML = "Sort : " + arr.sort((a,b)=> a-b);
+            }
+            
+        }
+</script>
+    </body>
+</html>

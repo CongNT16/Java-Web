@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <div>
+            <h3>THỰC HIỆN PHÉP TOÁN</h3>
+            <form>
+                Nhập n: <input type="text" id="n"> (1 < n <100) <br><br>
+                Chọn phép toán 
+                <select id="op">
+                    <option> Tổng n số liên tiếp </option>
+                    <option> Tính n! </option>
+                    <option> In dãy lẻ </option>
+                    <option> in dãy chẵn </option>
+                    <option> Kiểm tra số nguyên tố </option>
+                               
+                </select> <br><br>
+                
+                Kết quả: <input type="text" id="result">
+                <button type="button" id="btn">Cal</button>
+                                                 
+            </form>
+        </div>
+        <script language="javascript">
+            const n = document.querySelector('#n');
+            let sum = (n) => {
+                if(n === 1) return 1;
+                return n + sum(n-1);
+            }
+            let giaiThua= (n) => {
+                if ( n===0 || n === 1) return 1;
+                return n*giaiThua(n-1);
+            }
+            let chan = (n) => {
+                let sum = 0;
+                for(let i = 0;i<n;i++) {
+                    if(i %2 ===0) sum+=i;
+                }
+                return sum;
+            } 
+            let le = (n) => {
+                let sum = 0;
+                for(let i = 0;i<n;i++) {
+                    if(i %2 !=0) sum+=i;
+                }
+                return sum;
+            } 
+            let ktNgto = (n) => {
+                if(n<2) return false;
+                if(n === 2 || n ===3) return true;
+                for(let i = 2;i<Math.sqrt(n);i++) {
+                    if(n % i ===0) return false;
+                }
+                return true;
+            }
+
+            document.querySelector('#btn').addEventListener('click',()=>{
+                if(op.value==='Tổng n số liên tiếp') {
+                    document.querySelector('#result').value = sum(Number.parseInt(n.value));
+                }
+                if(op.value==='Tính n!') {
+                    document.querySelector('#result').value = giaiThua(Number.parseInt(n.value));
+                    
+                }
+                if(op.value==='In dãy lẻ') {
+                    document.querySelector('#result').value = le(Number.parseInt(n.value));
+                    
+                }
+                if(op.value==='in dãy chẵn') {
+                    document.querySelector('#result').value = chan(Number.parseInt(n.value));
+                    
+                }
+                if(op.value==='Kiểm tra số nguyên tố') {
+                    document.querySelector('#result').value = ktNgto(Number.parseInt(n.value));
+                    
+                }
+            })
+        </script>
+    </body>
+</html>

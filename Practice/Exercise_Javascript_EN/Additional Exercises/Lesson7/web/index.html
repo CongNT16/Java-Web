@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson7</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <form>
+                Nhập n <input type="text" id="input"> <br><br>
+                n! <input type="text" id="result"> <br><br>
+                
+                <input type="button" value="Kết quả" onclick="func()">
+            </form></div>
+        <script language = "javascript">
+            let func=() => {
+                result.value = giaiThua(Number.parseInt(input.value));
+            }
+            
+            giaiThua = function(n) {
+                if (n===0 || n ===1) return 1;
+                return giaiThua(n-1) * n;
+            }
+        </script>
+    </body>
+</html>

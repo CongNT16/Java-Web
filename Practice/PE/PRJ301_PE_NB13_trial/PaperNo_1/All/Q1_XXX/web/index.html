@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="enroll" method="post">
+            Student Name: <input type="text" name="name"/><br/>
+            Financial Source:
+            <input type="radio" name="source" value="Goverment"/>Goverment
+            <input type="radio" name="source" value="Grant" checked/>Grant
+            <input type="radio" name="source" value="Self-Sponsor"/>Self-Sponsor<br/>
+            Level: 
+            <select name="level">
+                <option value="Bsc">Bsc</option>
+                <option value="Master">Master</option>
+                <option value="PhD">PhD</option>
+            </select>
+            <br/>
+            DOE: <input type="date" name="date"/><br/>
+            <input type="submit" value="Save"/>
+        </form>
+    </body>
+</html>

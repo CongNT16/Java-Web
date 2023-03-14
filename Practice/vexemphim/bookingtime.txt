@@ -1,0 +1,4 @@
+//add project prj
+
+ALTER TABLE projectPRJ.dbo.Ticket ADD booking_date date NULL;
+ALTER TABLE projectPRJ.dbo.Ticket ADD booking_time time(0) NULL;

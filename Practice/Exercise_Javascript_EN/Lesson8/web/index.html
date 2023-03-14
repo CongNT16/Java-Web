@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson8</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <button type="button" onclick="alert(myFunc())">Data</button>
+        
+        <script language="javascript">
+            let myFunc = () => {
+                let myDate = new Date();
+                let day= () =>  {
+                    let x = myDate.getDay();
+                    if(x ===0) return 'Chủ Nhật';
+                    return 'thứ ' + x;
+                }
+                print = 
+                `Hôm nay là ${day()}, ngày ${myDate.getDate()} tháng ${myDate.getMonth()+ 1} năm ${myDate.getFullYear()}`
+                return print;
+            }
+        </script>
+        
+        <div><br>
+        </div>
+    </body>
+</html>

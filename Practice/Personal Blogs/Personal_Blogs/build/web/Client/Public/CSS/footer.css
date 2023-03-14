@@ -1,0 +1,171 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Oct 17, 2022, 8:53:46 PM
+    Author     : nguye
+*/
+
+
+
+.footer {
+    padding: 3rem 2rem 3rem;
+    
+    max-width: 117rem;
+    /*margin: 0 auto 3rem;*/
+    width: 100%;
+    display: flex;
+    align-items: unset;
+    justify-content: unset;
+    background-color: var(--main-color);
+}
+
+.footer .footer_left {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 3rem;
+    flex: 1 1;
+    background: linear-gradient(to top left,var(--main-color) -2500%,transparent 300%);
+    border-radius: 0.6rem;
+}
+
+.footer .footer_left .footer_left_logo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.footer .footer_left .footer_left_logo a {
+    display: inline-block;
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+.footer .footer_left .footer_left_logo span {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+.footer .footer .footer_left_info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.footer .footer .footer_left_info span {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-info);
+}
+
+.footer .footer .footer_left_info span a:hover {
+    color: var(--text-color);
+}
+
+.footer .footer .footer_left_info span a {
+    color: var(--text-info);
+    transition: color .3s ease;
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+.footer .footer_right {
+    flex: 3 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 0.6rem;
+    background: var(--widget-bg);
+}
+
+.footer .footer_right .footer_right_posts {
+    flex: 1 1;
+    padding: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: unset;
+    flex-direction: column;
+}
+
+.footer .footer_right .footer_headings {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+
+
+.footer .footer_right .footer_back {
+    flex: 1 1;
+    padding: 3rem;
+}
+
+
+ul {
+    list-style: none;
+}
+
+.footer .footer_right .footer_back ul li {
+    font-size: 1.3rem;
+    margin-bottom: 1.4rem;
+}
+
+.footer .footer_right .footer_back ul li a {
+    color: var(--link-color);
+    transition: color .2s ease;
+    
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+.copyRight {
+    padding: 0 2rem 2rem;
+    max-width: 117rem;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-color);
+}
+
+.copyRight .copyRight_left {
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+
+.copyRight .copyRight_right a {
+    margin-right: 1.5rem;
+    color: var(--white-color);
+    font-size: 1.6rem;
+    transition: color .2s ease;
+    display: inline-block;
+    
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+.bx {
+    font-family: boxicons!important;
+    font-weight: 400;
+    font-style: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    display: inline-block;
+    text-transform: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

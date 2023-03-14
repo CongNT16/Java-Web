@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <h1>Giải phương trình bậc nhất</h1>
+            <form>
+                a x + b = 0 <br><br>
+                Nhập a: <input type="text" id="t1"><br><br>
+                Nhập b: <input type="text" id="t2"><br><br>
+                
+                <input type="button" value="Giải PT" id="giai" onclick="Print()" >
+                <input type="button" value="Thoát"><br><br>
+                
+                Kết luận nghiệm<br>
+                <input type="text" id="results"  value=""><br><br>
+            </form>
+        </div>
+        
+        <script language="javascript">
+            function Print(){
+                if(t1.value === '' || t1.value === null ||t2.value === '' ||t2.value === null ) {
+                    document.getElementById("results").value = "";
+                }
+                else {
+                    if(Number.parseInt(t1.value) !== 0) {
+                    document.getElementById("results").value = -Number.parseInt(t2.value)/Number.parseInt(t1.value);
+                } else {
+                    if(Number.parseInt(t2.value) === 0) {
+                        document.getElementById("results").value = 'Có vô số nghiệm';
+                    } else {
+                        document.getElementById("results").value = 'Vô nghiệm';
+                    }
+                }
+                }
+                
+                
+            }
+   
+        </script>
+    </body>
+</html>

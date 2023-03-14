@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <h3>TTÌM MAX VÀ TÌM MIN</h3></div>
+        <form>
+            Nhập a: <input type="text" id ="t1"><br>
+            Nhập b: <input type="text" id ="t2"><br>
+            Nhập c: <input type="text" id ="t3"><br>
+            Kết quả: <input type="text" id ="results"><br>
+            
+            <input name="find" type="radio" id="max" />Tìm số lớn nhất <br>
+            <input name="find" type="radio" id="min" />Tìm số nhỏ nhất <br>
+            
+            <button type="button" id="tim">Tim</button>
+            <button type="button" id="xoa">Xoa</button>
+             </form>
+        <script language="javascript">
+         
+           
+        const a = document.querySelector("#t1");
+        const b = document.querySelector("#t2");
+        const c =document.querySelector("#t3");
+        const results =document.querySelector("#results");
+        const maxCheck =document.querySelector("#max");
+        const minCheck =document.querySelector("#min");
+
+        function  Kiemtra(a,b,c){}
+         
+         function  TimMax(a,b,c){
+            let max =a;
+            if (max < b) max =b;
+            if (max < c) max = c;
+            return max;
+         }
+         
+         function  TimMin(a,b,c){
+            let min =a;
+            if (min > b) min =b;
+            if (min > c) min =c;
+            return min;
+         }
+        
+         document.querySelector('#tim').onclick = ()=> {
+
+           if(maxCheck.checked === true)  results.value = 
+           TimMax(Number.parseInt(a.value),Number.parseInt(b.value),Number.parseInt(c.value));
+           if(minCheck.checked === true)  results.value = 
+           TimMin(Number.parseInt(a.value),Number.parseInt(b.value),Number.parseInt(c.value));
+         };
+        
+        </script>
+        
+<!--        <div>
+            <h3>TTÌM MAX VÀ TÌM MIN</h3></div>
+        <form>
+            Nhập a: <input type="text" id ="t1"><br>
+            Nhập b: <input type="text" id ="t2"><br>
+            Nhập c: <input type="text" id ="t3"><br>
+            Kết quả: <input type="text" id ="results"><br>
+            
+            <input name="find" type="radio" id="max" />Tìm số lớn nhất <br>
+            <input name="find" type="radio" id="min" />Tìm số nhỏ nhất <br>
+            
+            <button type="button" id="tim">Tim</button>
+            <button type="button" id="xoa">Xoa</button>
+             </form>
+        <script language="javascript">
+         
+           
+        const a = document.querySelector("#t1");
+        const b = document.querySelector("#t2");
+        const c =document.querySelector("#t3");
+        const results =document.querySelector("#results");
+        const maxCheck =document.querySelector("#max");
+        const minCheck =document.querySelector("#min");
+
+        function  Kiemtra(a,b,c){}
+         
+         function  TimMax(a,b,c){
+            let max =a;
+            if (max < b) max =b;
+            if (max < c) max = c;
+            return max;
+         }
+         
+         function  TimMin(a,b,c){
+            let min =a;
+            if (min > b) min =b;
+            if (min > c) min =c;
+            return min;
+         }
+        
+         document.querySelector('#tim').onclick = ()=> {
+
+           if(maxCheck.checked === true)  results.value = 
+           TimMax(Number.parseInt(a.value),Number.parseInt(b.value),Number.parseInt(c.value));
+           if(minCheck.checked === true)  results.value = 
+           TimMin(Number.parseInt(a.value),Number.parseInt(b.value),Number.parseInt(c.value));
+         };
+        
+        </script>-->
+        
+        
+    </body>
+</html>

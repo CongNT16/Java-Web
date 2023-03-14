@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+            <div><h1>Giải phương trình bậc hai</h1>
+                <form>
+                    a x<sup>2</sup> + b x + c = 0 <br><br>
+                    Nhập a: <input type="text" id="t1"><br><br>
+                    Nhập b: <input type="text" id="t2"><br><br>
+                    Nhập c: <input type="text" id="t3"><br><br>
+                    
+                    <input type="button" value="Giải PT" onclick="giai()">
+                    <input type="button" value="Thoát"><br><br>
+                    
+                    Kết luận nghiệm<br>
+                    <input type="text" id="result"><br><br>
+                </form>
+            </div>
+            
+            <script language="javascript">
+                let giai = () => {
+                    let a= Number.parseInt(t1.value),b=Number.parseInt(t2.value),c=Number.parseInt(t3.value);
+                    if(a === 0) {                           
+                        if(b === 0) {
+                            if(c ===0) {
+                                result.value = 'Có vô số nghiệm';
+                            } else {
+                                result.value = 'Vô nghiệm';
+                            }
+                        } else {
+                            result.value = -c/b;
+                        }
+                    } else {
+                        let delta = Math.pow(b,2) - 4*a*c;
+                        if(delta < 0) result.value = 'Vô nghiệm';
+                        if(delta ===0) result.value ="Có nghiệm : " +  -b/(2*a);
+                        if(delta>0) result.value ="Có nghiệm : " + (-b+Math.sqrt(delta))/(2*a) + ' và ' 
+                        +  (-b-Math.sqrt(delta))/(2*a)
+                    }
+                }
+                
+            </script>
+    </body>
+</html>

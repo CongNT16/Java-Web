@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Exercise 4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            form{
+                margin-top: 200px;
+                margin-left: 500px;
+                margin-right: 650px;
+                border: 2px solid black;
+                padding: 5px 10px 15px 20px
+            }
+
+        </style>
+
+
+
+        
+    </head>
+    <body>
+        <form action="thaotacmang" method="post">
+            <h3 style="text-align: center">Các thao tác với mảng</h3>
+            Nhập mảng  <textarea name="input" ></textarea>
+            <br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;<span style="font-size: 10pt">(nhập các số cách nhau bởi dấu ',')</span><br><br>
+            Chọn <input name="op" type="radio" value="enter-arr"> Nhập mảng   
+            <input name="op" type="radio" value="print-arr"> In mảng <br>
+            <input name="op" type="radio" value="tong-le"> Tổng lẻ 
+            <input name="op" type="radio" value="tich-chan"> Tích chẵn 
+            <input name="op" type="radio" value="sort"> Sắp xếp <br><br>
+
+            &emsp;&emsp;&emsp;&emsp;&emsp;
+            <button type="submit" >Thực Hiện</button>
+            <button onclick="closeTab()">Thoát</button>
+            
+
+
+        </form>
+        
+        <script language="javascript" >
+            function  closeTab() {
+                window.close();
+            }
+        </script>
+
+
+    </body>
+</html>

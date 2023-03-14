@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson9</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <form>
+                Nhập mảng <input type="text"   id="input"> <br><br>
+                In mảng <input type="text" id="printArr"> <br><br>
+                Tổng dương <input type="text" id="tongDuong"> <br><br>
+                Tích âm <input type="text" id="tichAm"> <br><br>
+                Đếm lẻ <input type="text" id="le"> <br><br>
+                Đếm chẫn <input type="text" id="chan"> <br><br>
+                
+                <input type="button" value="Kết quả" onclick="func()"> <!-- thêm nhiều nút cũng được mà chắc 1 nút là được -->
+            </form></div>
+        <script language = "javascript">
+            let func = () => {
+                let arr = input.value;
+                arr = arr.split(' ');
+                arr = arr.map(v => Number.parseInt(v));
+                printArr.value = arr;
+                tongDuong.value = arr.reduce((sum,value)=> {
+                    if(value >0) sum += value;
+                    return sum;
+                },0);
+                tichAm.value = arr.reduce((tich,value)=> {
+                    if(value <0) tich *= value;
+                    return tich;
+                },1);
+                le.value = arr.reduce((count,value)=> {
+                    if(value %2 !== 0) count += 1;
+                    return count;
+                },0);
+                chan.value = arr.length - Number.parseInt(le.value);
+            }
+            
+        </script>
+    </body>
+</html>

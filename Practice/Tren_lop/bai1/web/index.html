@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>bai1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .abc{margin-top: 200px;
+                 margin-left: 600px;
+                 font-size: 18pt;}
+            
+        </style>
+        <script>
+            function change() {
+                if (document.f1.role.selectedIndex == 0) {
+                    document.f1.salary.value = 0;
+                } else if (document.f1.role.selectedIndex == 1) {
+                    document.f1.salary.value = 100000;
+                } else if (document.f1.role.selectedIndex == 2) {
+                    document.f1.salary.value = 400000;
+                } else {
+                    document.f1.salary.value = 500000;
+                }
+            }
+            
+            function show(){
+                var mess=document.f1.code.value;
+                
+                mess= mess+ '\n' + document.f1.name.value;
+                
+                var gender=document.f1.gender[0].checked;
+                if(gender==true){mess=mess+'\nMale'}
+                else{mess=mess+'\nFemale'}
+                
+                mess=mess+ '\n' + document.f1.role.value;
+                
+                mess=mess+ '\n' + document.f1.salary.value;
+                
+                alert(mess);
+            }
+        </script>
+    </head>
+    <body>
+       
+        <div>
+            <form name="f1" class="abc">
+                <table >
+                    <tr>
+                        <td>Code:</td>
+                        <td><input type="text" name="code"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="name"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Gender:</td>
+                        <td><input type="radio" name="gender" checked> Male
+                            <input type="radio" name="gender"> Female</td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>Role:</td>
+                        <td>
+                            <select name="role" onchange="change()">
+                                <option>All role</option>
+                                <option>Director</option>
+                                <option>Employee</option>
+                                <option>Security</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Salary:</td>
+                        <td><input type="text" name="salary" readonly></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="submit" value="Ok" onclick="show()"></td>
+                        <td><input type="reset" value="Reset"></td>
+                    </tr>
+                </table>
+            </form></div>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Exercise 3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            form{
+                margin-top: 200px;
+                margin-left: 500px;
+                margin-right: 600px;
+                border: 2px solid red;
+                padding: 5px 10px 15px 10px
+            }
+            td{
+                padding: 5px;
+            }
+            
+        </style>
+        <script>
+            function change(){
+                document.getElementById("f").submit();
+            }
+        </script>
+    </head>
+    <body>
+        <form action="calculation" method="get" id="f">
+            <h3 style="color: blue; text-align: center">THỰC HIỆN PHÉP TOÁN</h3>
+            <table>
+                <tr>
+                    <td><span style="color: blue;font-weight: bold;">Nhập n </span></td>
+                    <td><input type="text" name="n">  <span style="font-weight: bold;">(1 &lt; n &lt;100)</span></td>
+                </tr> 
+                <tr>
+                    <td><span style="color: blue;font-weight: bold;">Chọn phép toán </span></td>
+                    <td>
+                        <select name="op" onchange="change()">
+                            <option >Tổng n số liên tiếp</option>
+                            <option >Tính n!</option>
+                            <option >In dãy lẻ</option>
+                            <option >In dãy chẵn</option>
+                            <option >Kiểm tra số nguyên tố</option>
+
+                        </select></td>
+                </tr> 
+                <tr>
+                    <td><span style="color: blue; font-weight: bold;">Kết quả </span></td>
+                    <td><input type="text" name="result" value="" readonly>
+                        <!--&emsp;<button type="submit" name="cal">Cal</button></td><tr>-->
+            </table>
+
+        </form>
+    </body>
+</html>

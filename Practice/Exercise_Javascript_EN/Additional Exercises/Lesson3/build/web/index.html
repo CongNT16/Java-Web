@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <form>
+                Nhập n <input type="text" id="n"> <br><br>
+                Tổng các số nguyên từ 1 đến n <input type="text" id="result"> <br><br>
+                
+                <input type="button" value="Kết quả" onclick="func()">
+            </form></div>
+        <script language = "javascript">
+            let func = () => {
+                let v = Number.parseInt(n.value);
+                result.value = (()=> {
+                    if (v ===0 || v ===1) return v;
+                        
+                    else return v*(v-1)/2
+                    
+                })();        
+            }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <form>
+                Nhập n <input type="text" id="t"> (từ 10 đến 100) 
+                <span style="color: red;" id="error"></span>
+                <br><br>
+                Căn bậc 2 của x <input type="text" id="result"> <br><br>
+                
+                <input type="button" value="Kết quả" onclick="func()">
+            </form></div>
+        <script language = "javascript">
+            let func =() => {
+                let n = Number.parseInt(t.value);
+                if(n < 10 || n > 100 || isNaN(n)) {
+                    document.querySelector('#error').textContent = "Giá trị không hợp lệ";
+                } else {
+                    document.querySelector('#error').textContent = "";
+                    result.value = Math.sqrt(n);
+                }
+            }
+            
+        </script>
+    </body>
+</html>
